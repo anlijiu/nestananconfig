@@ -7,7 +7,7 @@ import * as path from 'path';
 import { EnvConfig } from './interfaces';
 
 @Injectable()
-export class ConfigService {
+export class ConfigManagerService {
   private readonly envConfig: EnvConfig;
   private index: number;
 
@@ -17,7 +17,7 @@ export class ConfigService {
     this.walkDir(options.folder, this.envConfig);
   }
 
-  get(key: string): string|EnvConfig {
+  get(key: string): string|number|boolean|EnvConfig {
     return this.envConfig[key];
   }
 

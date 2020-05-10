@@ -1,4 +1,4 @@
-import { ConfigService } from './config.service';
+import { ConfigManagerService } from './config-manager.service';
 
 describe('ConfigService', () => {
   describe('It compiles and starts', () => {
@@ -6,7 +6,7 @@ describe('ConfigService', () => {
       const configOpts = {
         folder: 'config',
       };
-      const configService = new ConfigService(configOpts);
+      const configService = new ConfigManagerService(configOpts);
       expect(configService).toBeDefined();
     });
   });

@@ -1,3 +1,3 @@
 export interface EnvConfig {
-  [key: string]: string|EnvConfig;
+  [key: string]: string | number | boolean | EnvConfig;
 }
